@@ -1,0 +1,61 @@
+/* Basic styling for game container, background, traffic light */
+#gameContainer {
+    position: relative; /* To position elements within the container */
+    width: 800px; 
+    height: 600px;
+    border: 1px solid black; 
+    overflow: hidden; /* To hide overflowing background */
+  }
+  #speedDisplay {
+    position: absolute; /* Or any other positioning you prefer */
+    font-size: 40px;
+    top: 10px;
+    left: 10px;
+    font-size: 16px;
+    color: rgb(0, 0, 0); /* Or any other color */
+  }
+  #background {
+    position:relative; 
+    width: 200%; /* Make background wider than container */
+    height: 100%;
+    z-index: 0;
+    background-image: url("/assests/images/bg.jpg"); /* Replace with your background image */
+    /* Add animation for background movement using CSS animations or JavaScript */ 
+  }
+  
+  #trafficLight {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 150px;
+    /* Initial color */
+  }
+  
+  /* Styling for the motorcycle image */
+  #motorcycle {
+  
+    position: absolute
+    left: 20%;
+    top: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    width: 10px; /* Adjust based on your image size */
+    height: auto;
+    background-image: url("/assests/images/motorcycle.png"); /* Replace with your motorcycle image */
+  }
+  /* ... (previous styles for gameContainer, background, motorcycle) ... */
+
+#trafficLight {
+    /* ... (previous styles) ... */
+    display: flex;
+    flex-direction: column; 
+  }
+  
+  #redLight, #yellowLight, #greenLight {
+    width: 100%;
+    height: 50px; /* Adjust height as needed */
+  }
+  
+  #motorcycle[data-direction="backward"] { 
+    transform: translateX(-50%) scaleX(-1); /* Flip horizontally */
+  }
